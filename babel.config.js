@@ -1,19 +1,23 @@
 module.exports = {
-    presets: ["module:@react-native/babel-preset", "nativewind/babel"],
-    plugins: [
-        ["module-resolver", {
-            root: ["./src"],
-            alias: {
-                "@components": "./src/components",
-                "@config": "./src/config",
-                "@modules": "./src/modules",
-                "@navigation": "./src/navigation",
-                "@services": "./src/services",
-                "@store": "./src/store",
-                "@utils": "./src/utils",
-                "@types": "./src/utils/types",
-                "@src": "./src",
-            },
-        }, ], 'react-native-reanimated/plugin'
+  presets: ['module:@react-native/babel-preset', 'nativewind/babel'],
+  plugins: [
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        alias: {
+          '@app': './src/app',
+          '@config': './src/app/config',
+          '@screens': './src/screens',
+          '@components': './src/components',
+          '@navigation': './src/navigation',
+          '@types': './src/types',
+          '@utils': './src/utils',
+          '@services': './src/services',
+          '@assets': './src/assets',
+        },
+      },
     ],
+    'react-native-reanimated/plugin',
+  ],
 };
